@@ -1,22 +1,34 @@
+int myColorR= (int)(Math.random()*255);
+int myColorG= (int)(Math.random()*255);
+int myColorB= (int)(Math.random()*255);
 public void setup()
 {
+	background(0);
 	size(500, 500);
+	myFractal (250, 250, 300);
+
 
 }
 public void draw()
 {
-	//background(0);
-	myFractal (250, 250, 200);
+	//stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+	//myFractal (250, 250, 300);
 }
 public void myFractal(int x, int y, int siz)
 {
 	strokeWeight(1);
-	stroke((int)Math.random()*255, (int)Math.random()*255, (int)Math.random()*255);
+	stroke(myColorR, myColorG, myColorB); //uncomment it for random colors
 	noFill();
 	ellipse(x, y, siz, siz);
 	if(siz>10)
 	{
-		myFractal(x-siz/6, y, siz/2);
+		stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+		myFractal(x-siz/3, y, siz/2);
+		stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+		myFractal(x, y-siz/3, siz/2);
+		stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+		myFractal(x+siz/3, y, siz/2);
+		stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+		myFractal(x, y+siz/3, siz/2);
 	}
-
 }
