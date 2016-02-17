@@ -3,12 +3,12 @@ public void setup()
 {
   background(0);
   size(700, 700);
-  frameRate(30);
+  frameRate(20);
 }
 public void draw()
 {
   myFractal (350, 350, 300+grow);
-  grow++;
+  grow+=2;
     if(grow>250){
       grow=0;}
 }
