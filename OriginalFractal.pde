@@ -3,7 +3,7 @@ public void setup()
 {
   background(0);
   size(700, 700);
-  frameRate(20);
+  frameRate(25);
 }
 public void draw()
 {
