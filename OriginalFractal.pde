@@ -1,4 +1,5 @@
 int grow=0;
+//boolean
 public void setup()
 {
   background(0);
